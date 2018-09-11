@@ -55,9 +55,13 @@ describe HarryPricer do
       end
     end
 
-    context 'integration' do
+    context 'multiple discounts' do
       let_context shopping_bag: [2, 2, 2, 1, 1] do
         it { is_expected.to eq 51.6}
+      end
+
+      let_context shopping_bag: [3, 4, 2, 1, 1] do
+        it { is_expected.to eq 74.8}
       end
     end
   end
