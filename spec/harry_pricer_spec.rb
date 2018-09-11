@@ -1,4 +1,4 @@
-require 'harry_price.rb'
+require 'harry_pricer.rb'
 
 describe HarryPricer do
   it { expect(subject).to_not eq nil }
@@ -8,10 +8,6 @@ describe HarryPricer do
     context 'no discounts' do
       let_context shopping_bag: [1, 0, 0, 0, 0] do
         it { is_expected.to eq 8 }
-      end
-
-      let_context shopping_bag: [1, 1, 0, 0, 0] do
-        it { is_expected.to eq 16 }
       end
 
       let_context shopping_bag: [3, 0, 0, 0, 0] do
@@ -46,6 +42,16 @@ describe HarryPricer do
 
       let_context shopping_bag: [2, 0, 2, 2, 0] do
         it { is_expected.to eq 43.2}
+      end
+    end
+
+    context '5% discount' do
+      let_context shopping_bag: [0, 0, 1, 0, 1] do
+        it { is_expected.to eq 15.2}
+      end
+
+      let_context shopping_bag: [2, 0, 0, 2, 0] do
+        it { is_expected.to eq 30.4}
       end
     end
 
