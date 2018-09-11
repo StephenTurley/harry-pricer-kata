@@ -15,7 +15,7 @@ class HarryPricer
     when 4 then 25.6
     when 3 then 21.6
     when 2 then 15.2
-    when 1 then unique_books * 8
+    when 1 then 8
     end
   end
 
