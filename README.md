@@ -1,4 +1,7 @@
 # harry-pricer-kata
+Original is [here](https://github.com/garora/TDD-Katas/blob/master/KatasReadme.md)
+
+
 To try and encourage more sales of the 5 different Harry
 Potter books they sell, a bookshop has decided to offer
 discounts of multiple-book purchases.
