@@ -20,6 +20,6 @@ class HarryPricer
   end
 
   def remaining_books(shopping_bag)
-    shopping_bag.map { |count| count -=1 }
+    shopping_bag.map { |count| count -= 1 }
   end
 end
